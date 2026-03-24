@@ -952,26 +952,11 @@ function App() {
   }
 
   const pageMeta = {
-    dashboard: {
-      title: 'Control Center',
-      description: 'Tong quan slot, session va de xuat account nen dung tiep theo.',
-    },
-    accounts: {
-      title: 'Account Center',
-      description: 'Grid/list thao tac nhanh, filter va chon account dang focus.',
-    },
-    workspace: {
-      title: 'Workspace',
-      description: 'Chinh sua chi tiet account, session URL, repo va ghi chu van hanh.',
-    },
-    backups: {
-      title: 'Backup Center',
-      description: 'Nhap export ChatGPT, luu kho local va tra cuu conversation theo slot.',
-    },
-    settings: {
-      title: 'Local Settings',
-      description: 'Vi tri du lieu local, import/export va quy trinh su dung session.',
-    },
+    dashboard: { title: 'Control Center', description: '' },
+    accounts: { title: 'Account Center', description: '' },
+    workspace: { title: 'Workspace', description: '' },
+    backups: { title: 'Backup Center', description: '' },
+    settings: { title: 'Settings', description: '' },
   }[currentView]
 
   function updateState(mutator: (current: AppState) => AppState) {
@@ -1934,13 +1919,7 @@ function App() {
       <div className="view-stack">
         <section className="hero-board">
           <div className="hero-copy">
-            <span className="eyebrow">Antigravity-inspired flow</span>
-            <h1>Quan ly account nhu mot local control center, khong phai mot form don le.</h1>
-            <p>
-              Dashboard nay uu tien slot nen dung, session nao da san sang, account
-              nao sap het han va thao tac nao can lam tiep theo. Moi account mo
-              trong cua so Electron rieng de luu session local.
-            </p>
+            <h1 style={{ fontSize: '0.92rem' }}>{`${appState.accounts.length} accounts · ${sessionReadyAccounts} ready · ${soonRenewals} renewals`}</h1>
           </div>
 
           <div className="hero-inline-actions">
@@ -1993,10 +1972,7 @@ function App() {
         <section className="dashboard-grid">
           <div className="panel spotlight-panel">
             <div className="panel-head">
-              <div>
-                <span className="eyebrow">Spotlight</span>
-                <h2>Account dang nen focus</h2>
-              </div>
+              <h2>Spotlight</h2>
               {spotlight ? (
                 <button
                   className="button ghost small"
@@ -2031,10 +2007,6 @@ function App() {
                   </div>
 
                   <div className="spotlight-metrics">
-                    <div className="mini-stat">
-                      <span>Partition</span>
-                      <strong>{getAccountPartition(spotlight.id)}</strong>
-                    </div>
                     <div className="mini-stat">
                       <span>Session</span>
                       <strong>
@@ -2134,25 +2106,20 @@ function App() {
 
           <div className="panel quick-panel">
             <div className="panel-head">
-              <div>
-                <span className="eyebrow">Quick Actions</span>
-                <h2>Dieu phoi local</h2>
-              </div>
+              <h2>Quick Actions</h2>
             </div>
 
             <div className="quick-stack">
               <button className="quick-action" type="button" onClick={handleImport}>
                 <Import className="icon-sm" />
                 <div>
-                  <strong>Nap backup JSON</strong>
-                  <span>Import danh sach account va repo da co</span>
+                  <strong>Import JSON</strong>
                 </div>
               </button>
               <button className="quick-action" type="button" onClick={handleExport}>
                 <Download className="icon-sm" />
                 <div>
-                  <strong>Xuat backup JSON</strong>
-                  <span>Luu state local hien tai ra file ngoai</span>
+                  <strong>Export JSON</strong>
                 </div>
               </button>
               <button
@@ -2162,8 +2129,7 @@ function App() {
               >
                 <HardDriveDownload className="icon-sm" />
                 <div>
-                  <strong>Mo thu muc du lieu</strong>
-                  <span>Truy cap nhanh file local trong userData</span>
+                  <strong>Mo thu muc</strong>
                 </div>
               </button>
               <button
@@ -2174,29 +2140,18 @@ function App() {
               >
                 <FolderKanban className="icon-sm" />
                 <div>
-                  <strong>Mo workspace dang focus</strong>
-                  <span>{selectedAccount ? selectedAccount.label : 'Chua chon account'}</span>
+                  <strong>Workspace</strong>
                 </div>
               </button>
             </div>
 
-            <div className="storage-card">
-              <span className={`save-indicator status-${saveStatus}`} />
-              <div>
-                <strong>{saveStatusLabel(saveStatus)}</strong>
-                <p>{dataFilePath || 'Dang khoi tao file local...'}</p>
-              </div>
-            </div>
           </div>
         </section>
 
         <section className="dashboard-grid secondary">
           <div className="panel">
             <div className="panel-head">
-              <div>
-                <span className="eyebrow">Best Accounts</span>
-                <h2>De xuat de mo tiep theo</h2>
-              </div>
+              <h2>Best Accounts</h2>
               <button
                 className="button ghost small"
                 type="button"
@@ -2240,10 +2195,7 @@ function App() {
 
           <div className="panel">
             <div className="panel-head">
-              <div>
-                <span className="eyebrow">Renewals</span>
-                <h2>Canh bao subscription</h2>
-              </div>
+              <h2>Renewals</h2>
             </div>
 
             <div className="renewal-stack">
@@ -3680,10 +3632,7 @@ function App() {
         <section className="settings-grid">
           <article className="panel">
             <div className="panel-head">
-              <div>
-                <span className="eyebrow">Storage</span>
-                <h2>Du lieu local</h2>
-              </div>
+              <h2>Storage</h2>
             </div>
 
             <div className="settings-stack">
@@ -3711,10 +3660,6 @@ function App() {
                 <span>Theme</span>
                 <strong>{currentTheme === 'dark' ? 'Dark' : 'Light'}</strong>
               </div>
-              <div className="settings-row">
-                <span>Background mode</span>
-                <strong>Dong cua so chinh de an xuong tray/menu bar</strong>
-              </div>
             </div>
 
             <div className="summary-actions">
@@ -3739,10 +3684,7 @@ function App() {
 
           <article className="panel">
             <div className="panel-head">
-              <div>
-                <span className="eyebrow">Flow</span>
-                <h2>Cach dung giong Antigravity</h2>
-              </div>
+              <h2>Usage Guide</h2>
             </div>
 
             <ul className="settings-list">
@@ -3776,10 +3718,7 @@ function App() {
 
         <section className="panel">
           <div className="panel-head">
-            <div>
-              <span className="eyebrow">Status Board</span>
-              <h2>Phan bo hien tai</h2>
-            </div>
+            <h2>Status Board</h2>
           </div>
 
           <div className="status-board">
@@ -3819,9 +3758,6 @@ function App() {
                 </div>
               </div>
             </div>
-            <p style={{ fontSize: '0.76rem', lineHeight: 1.6, color: 'var(--text-soft)', margin: '6px 0 0' }}>
-              Quan ly account nhu mot local control center, khong phai mot form don le.
-            </p>
           </article>
 
           <article className="panel">
@@ -3970,7 +3906,6 @@ function App() {
         <header className="topbar">
           <div>
             <h1>{pageMeta.title}</h1>
-            <p>{pageMeta.description}</p>
           </div>
           {selectedAccount ? (
             <div className="topnav-status" style={{ gap: '4px' }}>
