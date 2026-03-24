@@ -3786,15 +3786,15 @@ function App() {
               </div>
               <div className="info-box" style={{ textAlign: 'center', padding: '12px' }}>
                 <strong style={{ fontSize: '0.78rem', marginBottom: '8px', display: 'block' }}>
-                  Binance (USDT - BEP20)
+                  Binance Pay
                 </strong>
                 <img
                   src={qrBinanceImage}
-                  alt="Binance QR"
-                  style={{ width: '100%', maxWidth: 280, borderRadius: 8, margin: '0 auto', display: 'block' }}
+                  alt="Binance Pay QR"
+                  style={{ width: '100%', maxWidth: 220, borderRadius: 8, margin: '0 auto', display: 'block' }}
                 />
-                <small style={{ display: 'block', marginTop: '6px', color: 'var(--text-soft)', wordBreak: 'break-all' }}>
-                  0xb99c6199b66feffadd950957a0c2692487fdcbf1
+                <small style={{ display: 'block', marginTop: '6px', color: 'var(--text-soft)' }}>
+                  Nickname: Do Tai
                 </small>
               </div>
             </div>

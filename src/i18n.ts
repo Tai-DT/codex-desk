@@ -1054,6 +1054,15 @@ const exactTranslations: Record<string, TranslationEntry> = {
     'आपके समर्थन के लिए धन्यवाद!',
     '지원해 주셔서 감사합니다!',
   ),
+  'Usage Guide': entry('Usage Guide', '使い方ガイド', '使用指南', 'उपयोग गाइड', '사용 가이드'),
+  'Mo session rieng va dang nhap thu cong mot lan.': entry(
+    'Open a dedicated session and log in manually once.',
+    '専用セッションを開き、手動で一度ログインしてください。',
+    '打开专用会话并手动登录一次。',
+    'एक अलग सत्र खोलें और मैन्युअल रूप से एक बार लॉगिन करें।',
+    '전용 세션을 열고 수동으로 한 번 로그인하세요.',
+  ),
+  'Binance Pay': entry('Binance Pay', 'Binance Pay', 'Binance Pay', 'Binance Pay', 'Binance Pay'),
 }
 
 const dynamicRules: DynamicRule[] = [
