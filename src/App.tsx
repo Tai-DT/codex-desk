@@ -633,6 +633,7 @@ function App() {
   )
   const [backupLoadStatus, setBackupLoadStatus] = useState<BackupLoadStatus>('idle')
   const [backupSearch, setBackupSearch] = useState('')
+  const [zoomImage, setZoomImage] = useState<string | null>(null)
   const deferredSearch = useDeferredValue(search.trim().toLowerCase())
   const deferredBackupSearch = useDeferredValue(backupSearch.trim().toLowerCase())
   const currentLanguage = appState.preferences.language
@@ -3778,7 +3779,8 @@ function App() {
                 <img
                   src={qrTimoImage}
                   alt="Timo QR"
-                  style={{ width: '100%', maxWidth: 200, borderRadius: 8, margin: '0 auto', display: 'block' }}
+                  style={{ width: '100%', maxWidth: 200, borderRadius: 8, margin: '0 auto', display: 'block', cursor: 'zoom-in' }}
+                  onClick={() => setZoomImage(qrTimoImage)}
                 />
                 <small style={{ display: 'block', marginTop: '6px', color: 'var(--text-soft)' }}>
                   DO TAI - Timo Digital Bank by BVBank
@@ -3791,7 +3793,8 @@ function App() {
                 <img
                   src={qrBinanceImage}
                   alt="Binance Pay QR"
-                  style={{ width: '100%', maxWidth: 220, borderRadius: 8, margin: '0 auto', display: 'block' }}
+                  style={{ width: '100%', maxWidth: 220, borderRadius: 8, margin: '0 auto', display: 'block', cursor: 'zoom-in' }}
+                  onClick={() => setZoomImage(qrBinanceImage)}
                 />
                 <small style={{ display: 'block', marginTop: '6px', color: 'var(--text-soft)' }}>
                   Nickname: Do Tai
@@ -3966,6 +3969,33 @@ function App() {
 
         <section className="content-shell">{renderCurrentView()}</section>
       </main>
+
+      {zoomImage ? (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            background: 'rgba(0,0,0,0.8)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'zoom-out',
+          }}
+          onClick={() => setZoomImage(null)}
+        >
+          <img
+            src={zoomImage}
+            alt="QR Zoom"
+            style={{
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              borderRadius: 12,
+              boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
+            }}
+          />
+        </div>
+      ) : null}
     </div>
   )
 }
