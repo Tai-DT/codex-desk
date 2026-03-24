@@ -36,14 +36,21 @@ npm run dev
 ## Build package
 
 ```bash
+npm run dist
 npm run dist:mac
+npm run dist:mac:split
 npm run dist:win
+npm run dist:win:arm64
 ```
 
 Artifact se duoc xuat vao thu muc `release/`.
 
 Luu y:
 
+- `npm run dist:mac` tao ban `universal` cho ca Intel va Apple Silicon.
+- `npm run dist:mac:split` tao rieng `x64` va `arm64` neu ban muon tach file.
+- `npm run dist:win` tao ban Windows `x64`.
+- `npm run dist:win:arm64` tao them ban Windows `arm64` neu can.
 - Build `macOS` nen chay tren macOS.
 - Build `Windows` on dinh nhat khi chay tren Windows hoac dung workflow CI da kem san.
 - App nay chi quan ly metadata va van hanh account. No khong hop nhat quota hay vuot gioi han cua OpenAI.
@@ -64,10 +71,22 @@ Luu y:
 GH_OWNER=ten-owner GH_REPO=ten-repo GH_TOKEN=github_pat_xxx npm run release:mac
 ```
 
+- Neu muon publish rieng file `x64` va `arm64` cho macOS:
+
+```bash
+GH_OWNER=ten-owner GH_REPO=ten-repo GH_TOKEN=github_pat_xxx npm run release:mac:split
+```
+
 - Build va publish Windows:
 
 ```bash
 GH_OWNER=ten-owner GH_REPO=ten-repo GH_TOKEN=github_pat_xxx npm run release:win
+```
+
+- Neu can Windows `arm64`:
+
+```bash
+GH_OWNER=ten-owner GH_REPO=ten-repo GH_TOKEN=github_pat_xxx npm run release:win:arm64
 ```
 
 - Neu dung GitHub Actions thi workflow da tu truyen `GH_OWNER`, `GH_REPO`, `GH_TOKEN` khi push tag `v*`.
