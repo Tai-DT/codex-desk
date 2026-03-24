@@ -41,6 +41,8 @@ import {
   type UpdateStatusSnapshot,
 } from '../src/types'
 
+const APP_NAME = 'Codex Desk'
+const APP_ID = 'com.codexdesk.app'
 const dataFileName = 'codex-desk-state.json'
 const { autoUpdater } = electronUpdater
 const currentDirectory = path.dirname(fileURLToPath(import.meta.url))
@@ -64,6 +66,8 @@ const runtimeIconCandidates = [
   path.resolve(currentDirectory, '../build/icons/app-icon.png'),
   path.resolve(currentDirectory, '../src/assets/app-icon.png'),
 ]
+
+app.setName(APP_NAME)
 
 type UnknownRecord = Record<string, unknown>
 
@@ -368,7 +372,7 @@ function ensureTray() {
   }
 
   tray = new Tray(createTrayIcon())
-  tray.setToolTip('Codex Desk')
+  tray.setToolTip(APP_NAME)
   tray.on('click', () => {
     if (mainWindow && !mainWindow.isDestroyed() && mainWindow.isVisible()) {
       hideMainWindow()
@@ -2814,7 +2818,7 @@ async function createWindow() {
     minWidth: 780,
     minHeight: 520,
     backgroundColor: '#f8f9fa',
-    title: 'Codex Desk',
+    title: APP_NAME,
     ...getBrowserWindowIconOptions(),
     webPreferences: {
       preload: preloadPath,
@@ -2885,7 +2889,7 @@ ipcMain.handle('manager:save-state', async (_event, rawState: AppState) => {
 
 ipcMain.handle('manager:import-state', async () => {
   const selection = await dialog.showOpenDialog({
-    title: 'Import Codex Desk JSON',
+    title: `Import ${APP_NAME} JSON`,
     filters: [{ name: 'JSON', extensions: ['json'] }],
     properties: ['openFile'],
   })
@@ -2915,7 +2919,7 @@ ipcMain.handle('manager:export-state', async (_event, rawState: AppState) => {
   )
 
   const target = await dialog.showSaveDialog({
-    title: 'Export Codex Desk JSON',
+    title: `Export ${APP_NAME} JSON`,
     defaultPath,
     filters: [{ name: 'JSON', extensions: ['json'] }],
   })
@@ -3172,6 +3176,7 @@ ipcMain.handle('manager:install-update', async () => {
 })
 
 app.whenReady().then(async () => {
+  app.setAppUserModelId(APP_ID)
   await mkdir(path.dirname(getDataFilePath()), { recursive: true })
   applyAppIcon()
   configureAutoUpdater()
