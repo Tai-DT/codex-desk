@@ -38,7 +38,7 @@ import {
 } from 'react'
 import './App.css'
 import qrTimoImage from './assets/qr-timo.jpg'
-import qrBinanceImage from './assets/qr-binance.png'
+import qrBinanceImage from './assets/qr-binance.jpg'
 import appIconImage from './assets/app-icon.png'
 import { desktopApi } from './desktop'
 import {
