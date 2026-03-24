@@ -1,7 +1,7 @@
 {
   "name": "codex-desk",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "tai",
   "description": "Desktop app to organize multiple ChatGPT Plus/Codex accounts across macOS and Windows.",
   "homepage": "https://github.com/Tai-DT/codex-desk",
