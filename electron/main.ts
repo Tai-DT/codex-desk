@@ -464,6 +464,37 @@ function isAutoUpdateSupported() {
   return app.isPackaged && (process.platform === 'win32' || process.platform === 'darwin')
 }
 
+function normalizeUpdaterErrorMessage(error: unknown) {
+  const rawMessage =
+    error instanceof Error ? error.message.trim() : coerceString(error).trim()
+
+  if (!rawMessage) {
+    return 'Khong kiem tra duoc ban cap nhat.'
+  }
+
+  if (
+    rawMessage.includes('ERR_UPDATER_LATEST_VERSION_NOT_FOUND') ||
+    rawMessage.includes('Unable to find latest version on GitHub') ||
+    rawMessage.includes('Cannot parse releases feed')
+  ) {
+    return 'Khong tim thay GitHub release da publish cho auto-update. Kiem tra release moi nhat khong o trang thai draft va da co file latest.yml/latest-mac.yml.'
+  }
+
+  if (
+    rawMessage.includes('ERR_UPDATER_CHANNEL_FILE_NOT_FOUND') ||
+    rawMessage.includes('Cannot find latest.yml') ||
+    rawMessage.includes('Cannot find latest-mac.yml')
+  ) {
+    return 'GitHub release moi nhat chua co du file auto-update (latest.yml/latest-mac.yml).'
+  }
+
+  if (rawMessage.includes('ECONN') || rawMessage.includes('network') || rawMessage.includes('timeout')) {
+    return 'Khong the ket noi toi may chu cap nhat. Kiem tra mang va thu lai.'
+  }
+
+  return rawMessage
+}
+
 async function checkForAppUpdates(manual = false) {
   if (!isAutoUpdateSupported()) {
     const unsupportedMessage = 'Auto-update chi hoat dong trong desktop build dong goi.'
@@ -499,8 +530,7 @@ async function checkForAppUpdates(manual = false) {
       updateStatus,
     }
   } catch (error) {
-    const message =
-      error instanceof Error ? error.message : 'Khong kiem tra duoc ban cap nhat.'
+    const message = normalizeUpdaterErrorMessage(error)
 
     broadcastUpdateStatus({
       status: 'error',
@@ -588,7 +618,7 @@ function configureAutoUpdater() {
   autoUpdater.on('error', (error) => {
     broadcastUpdateStatus({
       status: 'error',
-      message: error?.message?.trim() || 'Khong kiem tra duoc ban cap nhat.',
+      message: normalizeUpdaterErrorMessage(error),
       checkedAt: new Date().toISOString(),
     })
   })
