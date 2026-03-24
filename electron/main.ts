@@ -41,7 +41,7 @@ import {
   type UpdateStatusSnapshot,
 } from '../src/types'
 
-const dataFileName = 'manager-codex-state.json'
+const dataFileName = 'codex-desk-state.json'
 const { autoUpdater } = electronUpdater
 const accountWindows = new Map<string, BrowserWindow>()
 let mainWindow: BrowserWindow | null = null
@@ -2846,7 +2846,7 @@ ipcMain.handle('manager:save-state', async (_event, rawState: AppState) => {
 
 ipcMain.handle('manager:import-state', async () => {
   const selection = await dialog.showOpenDialog({
-    title: 'Import manager-codex JSON',
+    title: 'Import Codex Desk JSON',
     filters: [{ name: 'JSON', extensions: ['json'] }],
     properties: ['openFile'],
   })
@@ -2872,11 +2872,11 @@ ipcMain.handle('manager:export-state', async (_event, rawState: AppState) => {
   const state = sanitizeState(rawState)
   const defaultPath = path.join(
     app.getPath('documents'),
-    `manager-codex-export-${new Date().toISOString().slice(0, 10)}.json`,
+    `codex-desk-export-${new Date().toISOString().slice(0, 10)}.json`,
   )
 
   const target = await dialog.showSaveDialog({
-    title: 'Export manager-codex JSON',
+    title: 'Export Codex Desk JSON',
     defaultPath,
     filters: [{ name: 'JSON', extensions: ['json'] }],
   })

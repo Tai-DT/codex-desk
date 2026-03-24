@@ -1,5 +1,5 @@
 {
-  "name": "manager-codex",
+  "name": "codex-desk",
   "private": true,
   "version": "0.1.0",
   "author": "tai",
@@ -30,7 +30,7 @@
     "preview": "vite preview"
   },
   "build": {
-    "appId": "com.managercodex.desktop",
+    "appId": "com.codexdesk.app",
     "productName": "Codex Desk",
     "asar": true,
     "directories": {

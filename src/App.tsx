@@ -82,7 +82,7 @@ type NavItem = {
 
 const renewalWindowDays = 7
 const dayInMs = 1000 * 60 * 60 * 24
-const accountsViewStorageKey = 'manager-codex:accounts-view'
+const accountsViewStorageKey = 'codex-desk:accounts-view'
 const initialUpdateStatus: UpdateStatusSnapshot = {
   status: 'idle',
   currentVersion: '',

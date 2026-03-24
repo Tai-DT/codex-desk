@@ -429,7 +429,7 @@ export function createInitialState(): AppState {
 }
 
 export function getAccountPartition(accountId: string) {
-  return `persist:manager-codex-account-${accountId}`
+  return `persist:codex-desk-account-${accountId}`
 }
 
 function sanitizeRepository(value: unknown): RepositoryRecord {

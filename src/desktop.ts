@@ -5,8 +5,8 @@ import {
   type DesktopApi,
 } from './types'
 
-const storageKey = 'manager-codex:state'
-const browserDataPath = 'browser-storage://manager-codex/state.json'
+const storageKey = 'codex-desk:state'
+const browserDataPath = 'browser-storage://codex-desk/state.json'
 
 function readBrowserState(): AppState {
   try {
@@ -22,7 +22,7 @@ function readBrowserState(): AppState {
 }
 
 function downloadJson(state: AppState) {
-  const fileName = `manager-codex-export-${new Date().toISOString().slice(0, 10)}.json`
+  const fileName = `codex-desk-export-${new Date().toISOString().slice(0, 10)}.json`
   const blob = new Blob([JSON.stringify(state, null, 2)], {
     type: 'application/json',
   })
