@@ -49,7 +49,7 @@ const browserApi: DesktopApi = {
         bytesPerSecond: 0,
         transferred: 0,
         total: 0,
-        message: 'Auto update chi kha dung trong desktop build.',
+        message: 'Auto update chỉ khả dụng trong desktop build.',
         checkedAt: '',
       },
     }
@@ -81,91 +81,91 @@ const browserApi: DesktopApi = {
   async openPath() {
     return {
       ok: false,
-      message: 'Tinh nang mo path chi kha dung trong desktop build.',
+      message: 'Tính năng mở path chỉ khả dụng trong desktop build.',
     }
   },
   async openDataDirectory() {
     return {
       ok: false,
-      message: 'Tinh nang mo thu muc du lieu chi kha dung trong desktop build.',
+      message: 'Tính năng mở thư mục dữ liệu chỉ khả dụng trong desktop build.',
     }
   },
   async openAccountSession() {
     return {
       ok: false,
-      message: 'Tinh nang session rieng chi kha dung trong desktop build.',
+      message: 'Tính năng session riêng chỉ khả dụng trong desktop build.',
     }
   },
   async openCodexWindow() {
     return {
       ok: false,
-      message: 'Tinh nang mo Codex rieng chi kha dung trong desktop build.',
+      message: 'Tính năng mở Codex riêng chỉ khả dụng trong desktop build.',
     }
   },
   async captureMachineCodexAuth() {
     return {
       ok: false,
-      message: 'Tinh nang chup auth Codex may chi kha dung trong desktop build.',
+      message: 'Tính năng chụp auth Codex máy chỉ khả dụng trong desktop build.',
     }
   },
   async switchMachineCodexAuth() {
     return {
       ok: false,
-      message: 'Tinh nang chuyen Codex may chi kha dung trong desktop build.',
+      message: 'Tính năng chuyển Codex máy chỉ khả dụng trong desktop build.',
     }
   },
   async diagnoseCodexAuth() {
     return {
       ok: false,
-      message: 'Tinh nang chan doan Codex may chi kha dung trong desktop build.',
+      message: 'Tính năng chẩn đoán Codex máy chỉ khả dụng trong desktop build.',
     }
   },
   async readMachineCodexUsage() {
     return {
       ok: false,
-      message: 'Tinh nang doc usage Codex chi kha dung trong desktop build.',
+      message: 'Tính năng đọc usage Codex chỉ khả dụng trong desktop build.',
     }
   },
   async readAccountRenewalDate() {
     return {
       ok: false,
-      message: 'Tinh nang doc renewal date chi kha dung trong desktop build.',
+      message: 'Tính năng đọc renewal date chỉ khả dụng trong desktop build.',
     }
   },
   async importChatBackup() {
     return {
       ok: false,
-      message: 'Tinh nang import backup chat chi kha dung trong desktop build.',
+      message: 'Tính năng import backup chat chỉ khả dụng trong desktop build.',
     }
   },
   async readChatBackup() {
     return {
       ok: false,
-      message: 'Tinh nang doc backup chat chi kha dung trong desktop build.',
+      message: 'Tính năng đọc backup chat chỉ khả dụng trong desktop build.',
     }
   },
   async resetAccountSession() {
     return {
       ok: false,
-      message: 'Tinh nang session rieng chi kha dung trong desktop build.',
+      message: 'Tính năng session riêng chỉ khả dụng trong desktop build.',
     }
   },
   async syncAccountSession() {
     return {
       ok: false,
-      message: 'Tinh nang dong bo session chi kha dung trong desktop build.',
+      message: 'Tính năng đồng bộ session chỉ khả dụng trong desktop build.',
     }
   },
   async checkForUpdates() {
     return {
       ok: false,
-      message: 'Tinh nang cap nhat chi kha dung trong desktop build.',
+      message: 'Tính năng cập nhật chỉ khả dụng trong desktop build.',
     }
   },
   async installUpdate() {
     return {
       ok: false,
-      message: 'Tinh nang cap nhat chi kha dung trong desktop build.',
+      message: 'Tính năng cập nhật chỉ khả dụng trong desktop build.',
     }
   },
   onUpdateStatus() {

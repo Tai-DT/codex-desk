@@ -1065,6 +1065,570 @@ const exactTranslations: Record<string, TranslationEntry> = {
   'Binance Pay': entry('Binance Pay', 'Binance Pay', 'Binance Pay', 'Binance Pay', 'Binance Pay'),
 }
 
+const vietnameseAccentedTranslations: Record<string, string> = {
+  'Tong quan va de xuat': 'Tổng quan và đề xuất',
+  'Grid/list va thao tac nhanh': 'Grid/list và thao tác nhanh',
+  'Chinh sua profile dang focus': 'Chỉnh sửa profile đang focus',
+  'Luu kho chat export theo slot': 'Lưu kho chat export theo slot',
+  'Du lieu local va huong dan': 'Dữ liệu local và hướng dẫn',
+  'Du lieu local': 'Dữ liệu local',
+  'Tong quan slot, session va de xuat account nen dung tiep theo.':
+    'Tổng quan slot, session và đề xuất account nên dùng tiếp theo.',
+  'Grid/list thao tac nhanh, filter va chon account dang focus.':
+    'Grid/list thao tác nhanh, filter và chọn account đang focus.',
+  'Chinh sua chi tiet account, session URL, repo va ghi chu van hanh.':
+    'Chỉnh sửa chi tiết account, session URL, repo và ghi chú vận hành.',
+  'Nhap export ChatGPT, luu kho local va tra cuu conversation theo slot.':
+    'Nhập export ChatGPT, lưu kho local và tra cứu conversation theo slot.',
+  'Vi tri du lieu local, import/export va quy trinh su dung session.':
+    'Vị trí dữ liệu local, import/export và quy trình sử dụng session.',
+  'Cach dung giong Antigravity': 'Cách dùng giống Antigravity',
+  'Dong cua so chinh de an xuong tray/menu bar': 'Đóng cửa sổ chính để ẩn xuống tray/menu bar',
+  'Dong cua so chinh de app tiep tuc chay nen; muon tat han thi mo tray/menu bar va chon Thoat.':
+    'Đóng cửa sổ chính để app tiếp tục chạy nền; muốn tắt hẳn thì mở tray/menu bar và chọn Thoát.',
+  'Phan bo hien tai': 'Phân bổ hiện tại',
+  'Chua login': 'Chưa login',
+  'Chua co profile Codex': 'Chưa có profile Codex',
+  'Codex may': 'Codex máy',
+  'Gia han': 'Gia hạn',
+  'Quan ly account nhu mot local control center, khong phai mot form don le.':
+    'Quản lý account như một local control center, không phải một form đơn lẻ.',
+  'Dashboard nay uu tien slot nen dung, session nao da san sang, account nao sap het han va thao tac nao can lam tiep theo. Moi account mo trong cua so Electron rieng de luu session local.':
+    'Dashboard này ưu tiên slot nên dùng, session nào đã sẵn sàng, account nào sắp hết hạn và thao tác nào cần làm tiếp theo. Mỗi account mở trong cửa sổ Electron riêng để lưu session local.',
+  'Tao slot moi': 'Tạo slot mới',
+  'Mo Account Center': 'Mở Account Center',
+  'Tong accounts': 'Tổng accounts',
+  'Da co session luu local': 'Đã có session lưu local',
+  'Repo gan kem': 'Repo gắn kèm',
+  'Gia han sap toi': 'Gia hạn sắp tới',
+  'Account dang nen focus': 'Account đang nên focus',
+  'Mo workspace': 'Mở workspace',
+  'Profile Codex dang mo': 'Profile Codex đang mở',
+  'Dang nhap / Mo session': 'Đăng nhập / Mở session',
+  'Sync tai khoan': 'Sync tài khoản',
+  'Dang xu ly...': 'Đang xử lý...',
+  'Kiem tra profile': 'Kiểm tra profile',
+  'Dang chuyen...': 'Đang chuyển...',
+  'Mo profile Codex': 'Mở profile Codex',
+  'Dang mo profile Codex...': 'Đang mở profile Codex...',
+  'Chua co account nao': 'Chưa có account nào',
+  'Tao account dau tien de bat dau luu session va repo.': 'Tạo account đầu tiên để bắt đầu lưu session và repo.',
+  'Dieu phoi local': 'Điều phối local',
+  'Nap backup JSON': 'Nạp backup JSON',
+  'Import danh sach account va repo da co': 'Import danh sách account và repo đã có',
+  'Xuat backup JSON': 'Xuất backup JSON',
+  'Luu state local hien tai ra file ngoai': 'Lưu state local hiện tại ra file ngoài',
+  'Mo thu muc du lieu': 'Mở thư mục dữ liệu',
+  'Truy cap nhanh file local trong userData': 'Truy cập nhanh file local trong userData',
+  'Mo workspace dang focus': 'Mở workspace đang focus',
+  'Chua chon account': 'Chưa chọn account',
+  'Dang khoi tao file local...': 'Đang khởi tạo file local...',
+  'De xuat de mo tiep theo': 'Đề xuất để mở tiếp theo',
+  'Xem tat ca': 'Xem tất cả',
+  'Chua co account nao de xep hang.': 'Chưa có account nào để xếp hạng.',
+  'Canh bao subscription': 'Cảnh báo subscription',
+  'Chua dat renewal date cho account nao.': 'Chưa đặt renewal date cho account nào.',
+  'Tat ca': 'Tất cả',
+  'Chon mot account de mo session, dua vao workspace hoac reset cookie rieng.':
+    'Chọn một account để mở session, đưa vào workspace hoặc reset cookie riêng.',
+  'Tao moi': 'Tạo mới',
+  'Khong co account nao khop bo loc hien tai.': 'Không có account nào khớp bộ lọc hiện tại.',
+  'Thu bo bot filter hoac tao account moi.': 'Thử bỏ bớt filter hoặc tạo account mới.',
+  'Dang sync...': 'Đang sync...',
+  'Dang doc usage...': 'Đang đọc usage...',
+  'Dang doc gia han...': 'Đang đọc gia hạn...',
+  'Sync gia han': 'Sync gia hạn',
+  'Mo session': 'Mở session',
+  'Profile dang mo': 'Profile đang mở',
+  'Huong dan su dung': 'Hướng dẫn sử dụng',
+  'Mo session rieng cho account.': 'Mở session riêng cho account.',
+  'Dang nhap ChatGPT/Codex trong cua so do.': 'Đăng nhập ChatGPT/Codex trong cửa sổ đó.',
+  'Bam Sync de doc email, ten va goi tu session vua luu.':
+    'Bấm Sync để đọc email, tên và gói từ session vừa lưu.',
+  'Bam Mo profile Codex de mo Codex local theo profile rieng cua slot da chon.':
+    'Bấm Mở profile Codex để mở Codex local theo profile riêng của slot đã chọn.',
+  'Neu slot chua co profile, dang nhap trong Codex vua mo roi bam Kiem tra profile de xac nhan cho lan doi sau.':
+    'Nếu slot chưa có profile, đăng nhập trong Codex vừa mở rồi bấm Kiểm tra profile để xác nhận cho lần đổi sau.',
+  'Chua co account dang focus.': 'Chưa có account đang focus.',
+  'Chon mot account tu Dashboard hoac Account Center.': 'Chọn một account từ Dashboard hoặc Account Center.',
+  'Profile Codex dang active khong trung voi slot dang focus.':
+    'Profile Codex đang active không trùng với slot đang focus.',
+  'Chuyen sang slot nay': 'Chuyển sang slot này',
+  'Mo slot dang active': 'Mở slot đang active',
+  'Thong tin co ban': 'Thông tin cơ bản',
+  'Chua nhan dien': 'Chưa nhận diện',
+  'Bam Kiem tra profile lai de cap nhat fingerprint cho slot nay.':
+    'Bấm Kiểm tra profile lại để cập nhật fingerprint cho slot này.',
+  'Day la profile Codex dang active tren may nay.': 'Đây là profile Codex đang active trên máy này.',
+  'Ten hien thi': 'Tên hiển thị',
+  'Email tu session': 'Email từ session',
+  'Session dang bao cao:': 'Session đang báo cáo:',
+  'Workspace mo voi profile Codex': 'Workspace mở với profile Codex',
+  'De trong thi app se dung repo dau tien co path.': 'Để trống thì app sẽ dùng repo đầu tiên có path.',
+  'Lan dung cuoi': 'Lần dùng cuối',
+  'Muc dich chinh': 'Mục đích chính',
+  'Ghi chu': 'Ghi chú',
+  'Tags va ghi chu': 'Tags và ghi chú',
+  'Repo gan voi account': 'Repo gắn với account',
+  'Them repo': 'Thêm repo',
+  'Chua co repo nao gan voi account nay.': 'Chưa có repo nào gắn với account này.',
+  'Ten repo': 'Tên repo',
+  'Branch mac dinh': 'Branch mặc định',
+  'Muc dich': 'Mục đích',
+  'Chua co slot de gan backup.': 'Chưa có slot để gắn backup.',
+  'Chon mot account, sau do import file export ChatGPT cho slot do.':
+    'Chọn một account, sau đó import file export ChatGPT cho slot đó.',
+  'Kho backup local': 'Kho backup local',
+  'Dang import...': 'Đang import...',
+  'Mo thu muc backup': 'Mở thư mục backup',
+  'Trong ChatGPT, request Data Export cho account can sao luu.':
+    'Trong ChatGPT, request Data Export cho account cần sao lưu.',
+  'Sau khi nhan email, tai file `.zip` ve may.': 'Sau khi nhận email, tải file `.zip` về máy.',
+  'Import file `.zip` hoac `conversations.json` vao slot nay.':
+    'Import file `.zip` hoặc `conversations.json` vào slot này.',
+  'App se luu mot ban archive local rieng de tra cuu va sao chep.':
+    'App sẽ lưu một bản archive local riêng để tra cứu và sao chép.',
+  'Danh sach file da nap': 'Danh sách file đã nạp',
+  'Chua co backup nao.': 'Chưa có backup nào.',
+  'Import file export cua OpenAI de bat dau luu kho local.':
+    'Import file export của OpenAI để bắt đầu lưu kho local.',
+  'Chua chon chat': 'Chưa chọn chat',
+  'Tim theo title, message, participant...': 'Tìm theo title, message, participant...',
+  'Dang nap backup.': 'Đang nạp backup.',
+  'App dang doc noi dung conversation tu kho local.': 'App đang đọc nội dung conversation từ kho local.',
+  'Khong doc duoc backup.': 'Không đọc được backup.',
+  'Thu import lai file export hoac kiem tra thu muc backup local.':
+    'Thử import lại file export hoặc kiểm tra thư mục backup local.',
+  'Khong co ket qua phu hop.': 'Không có kết quả phù hợp.',
+  'Thu doi tu khoa tim kiem hoac chon file backup khac.':
+    'Thử đổi từ khóa tìm kiếm hoặc chọn file backup khác.',
+  'Khong co preview.': 'Không có preview.',
+  'Chua co conversation duoc chon.': 'Chưa có conversation được chọn.',
+  'Chon mot chat o cot ben trai de xem noi dung.': 'Chọn một chat ở cột bên trái để xem nội dung.',
+  'Chua co backup nao dang duoc mo.': 'Chưa có backup nào đang được mở.',
+  'Import mot file export ChatGPT hoac chon backup da co trong danh sach.':
+    'Import một file export ChatGPT hoặc chọn backup đã có trong danh sách.',
+  'Dang nap du lieu': 'Đang nạp dữ liệu',
+  'Dang luu thay doi': 'Đang lưu thay đổi',
+  'Da dong bo local': 'Đã đồng bộ local',
+  'Gap loi khi luu': 'Gặp lỗi khi lưu',
+  'Dang san sang': 'Đang sẵn sàng',
+  'Dang kiem tra update': 'Đang kiểm tra update',
+  'Da tim thay ban moi': 'Đã tìm thấy bản mới',
+  'Da moi nhat': 'Đã mới nhất',
+  'Dang tai ban moi': 'Đang tải bản mới',
+  'San sang cai dat': 'Sẵn sàng cài đặt',
+  'Loi update': 'Lỗi update',
+  'Kiem tra update': 'Kiểm tra update',
+  'Cap nhat app': 'Cập nhật app',
+  'Cai dat va khoi dong lai': 'Cài đặt và khởi động lại',
+  'Thu lai': 'Thử lại',
+  'Dang kiem tra ban cap nhat...': 'Đang kiểm tra bản cập nhật...',
+  'Ban dang o phien ban moi nhat.': 'Bạn đang ở phiên bản mới nhất.',
+  'Khong kiem tra duoc ban cap nhat.': 'Không kiểm tra được bản cập nhật.',
+  'Ban cap nhat chua duoc tai xong.': 'Bản cập nhật chưa được tải xong.',
+  'Auto-update chi hoat dong trong desktop build dong goi.':
+    'Auto-update chỉ hoạt động trong desktop build đóng gói.',
+  'Can dang nhap lai': 'Cần đăng nhập lại',
+  'Nen de nghi': 'Nên để nghỉ',
+  'Da luu tru': 'Đã lưu trữ',
+  'Chua co lich gia han': 'Chưa có lịch gia hạn',
+  'Gia han hom nay': 'Gia hạn hôm nay',
+  'Gia han ngay mai': 'Gia hạn ngày mai',
+  'Chua co': 'Chưa có',
+  'Khong ro': 'Không rõ',
+  'Chua dat': 'Chưa đặt',
+  'Chua xac dinh': 'Chưa xác định',
+  'Chua co lich su': 'Chưa có lịch sử',
+  'Chua co email': 'Chưa có email',
+  'Tai khoan': 'Tài khoản',
+  'Chua co profile': 'Chưa có profile',
+  'Co profile, can xac nhan lai': 'Có profile, cần xác nhận lại',
+  'Chua co session da luu': 'Chưa có session đã lưu',
+  'Tai khoan moi': 'Tài khoản mới',
+  'San sang': 'Sẵn sàng',
+  'Kiem tra': 'Kiểm tra',
+  'Mo profile': 'Mở profile',
+  'Session rieng': 'Session riêng',
+  'Chua mo': 'Chưa mở',
+  'Chua sync': 'Chưa sync',
+  'Chua chup': 'Chưa chụp',
+  'Chua doc': 'Chưa đọc',
+  'Dang doc...': 'Đang đọc...',
+  'Dang mo...': 'Đang mở...',
+  'Dang khoi tao...': 'Đang khởi tạo...',
+  'Mo thu muc': 'Mở thư mục',
+  'Co the bam Sync gia han de dien tu dong.': 'Có thể bấm Sync gia hạn để điền tự động.',
+  'Bam Kiem tra profile lai de nhan dien account_id cua slot.':
+    'Bấm Kiểm tra profile lại để nhận diện account_id của slot.',
+  'Dang chan doan...': 'Đang chẩn đoán...',
+  'Tao mot account record cho tung tai khoan ChatGPT Plus.':
+    'Tạo một account record cho từng tài khoản ChatGPT Plus.',
+  'Gan repo, profile path va launch command cho tung slot.':
+    'Gắn repo, profile path và launch command cho từng slot.',
+  'Trong Codex local, login tung account 1 lan trong dung profile cua slot roi bam Kiem tra profile.':
+    'Trong Codex local, login từng account 1 lần trong đúng profile của slot rồi bấm Kiểm tra profile.',
+  'Dung Dashboard de mo lai Codex bang profile account can dung, khong can dang nhap lai.':
+    'Dùng Dashboard để mở lại Codex bằng profile account cần dùng, không cần đăng nhập lại.',
+  'App se thu doc ngay gia han tu session ChatGPT cua slot nay va tu dong dien vao o tren.':
+    'App sẽ thử đọc ngày gia hạn từ session ChatGPT của slot này và tự động điền vào ô trên.',
+  'vi du: open -na "Google Chrome" --args --profile-directory="Profile 3"':
+    'ví dụ: open -na "Google Chrome" --args --profile-directory="Profile 3"',
+  'Cap usage cho sprint nay': 'Cập usage cho sprint này',
+  'Review PR va bugfix': 'Review PR và bugfix',
+  'Luu y ve OTP, quota, project gan voi account nay...': 'Lưu ý về OTP, quota, project gắn với account này...',
+  'Khong doc duoc file du lieu. App dang dung bo nho tam thoi.':
+    'Không đọc được file dữ liệu. App đang dùng bộ nhớ tạm thời.',
+  'Khong doc duoc noi dung backup da chon.': 'Không đọc được nội dung backup đã chọn.',
+  'Khong the ghi thay doi xuong o dia.': 'Không thể ghi thay đổi xuống ổ đĩa.',
+  'Khong mo duoc profile Codex cho slot nay.': 'Không mở được profile Codex cho slot này.',
+  'Khong doc duoc profile Codex.': 'Không đọc được profile Codex.',
+  'Khong chan doan duoc profile Codex.': 'Không chẩn đoán được profile Codex.',
+  'Da tao mot ho so tai khoan moi.': 'Đã tạo một hồ sơ tài khoản mới.',
+  'Da nhan ban account dang focus.': 'Đã nhân bản account đang focus.',
+  'Da xuat du lieu.': 'Đã xuất dữ liệu.',
+  'Da nap du lieu JSON.': 'Đã nạp dữ liệu JSON.',
+  'Da mo vi tri luu du lieu local.': 'Đã mở vị trí lưu dữ liệu local.',
+  'Chua xac dinh duoc thu muc backup chat trong build hien tai.':
+    'Chưa xác định được thư mục backup chat trong build hiện tại.',
+  'Chua xac dinh duoc thu muc profile Codex trong build hien tai.':
+    'Chưa xác định được thư mục profile Codex trong build hiện tại.',
+  'Khong mo duoc thu muc du lieu.': 'Không mở được thư mục dữ liệu.',
+  'Khong mo duoc cua so session rieng.': 'Không mở được cửa sổ session riêng.',
+  'Chua chon account nao cho Codex. Vao Workspace va bam "Mo profile Codex".':
+    'Chưa chọn account nào cho Codex. Vào Workspace và bấm "Mở profile Codex".',
+  'Khong reset duoc session rieng.': 'Không reset được session riêng.',
+  'Khong dong bo duoc session hien tai.': 'Không đồng bộ được session hiện tại.',
+  'Khong doc duoc usage Codex tu profile nay.': 'Không đọc được usage Codex từ profile này.',
+  'Da cap nhat usage Codex tu log local.': 'Đã cập nhật usage Codex từ log local.',
+  'Ung ho tac gia': 'Ủng hộ tác giả',
+  'Neu app huu ich, ban co the ung ho tac gia qua cac kenh ben duoi.':
+    'Nếu app hữu ích, bạn có thể ủng hộ tác giả qua các kênh bên dưới.',
+  'Chuyen khoan ngan hang (VietQR)': 'Chuyển khoản ngân hàng (VietQR)',
+  'Cam on su ung ho cua ban!': 'Cảm ơn sự ủng hộ của bạn!',
+  'Mo session rieng va dang nhap thu cong mot lan.': 'Mở session riêng và đăng nhập thủ công một lần.',
+  'Dashboard': 'Tổng quan',
+  'Accounts': 'Tài khoản',
+  'Workspace': 'Workspace',
+  'Backups': 'Sao lưu',
+  'Settings': 'Cài đặt',
+  'Control Center': 'Trung tâm điều khiển',
+  'Account Center': 'Trung tâm tài khoản',
+  'Backup Center': 'Trung tâm sao lưu',
+  'Local Settings': 'Cài đặt local',
+  'Storage': 'Lưu trữ',
+  'Save status': 'Trạng thái lưu',
+  'Data file': 'Tệp dữ liệu',
+  'App version': 'Phiên bản app',
+  'Update': 'Cập nhật',
+  'Background mode': 'Chế độ chạy nền',
+  'Language': 'Ngôn ngữ',
+  'Theme': 'Chủ đề',
+  'Light': 'Sáng',
+  'Dark': 'Tối',
+  'Flow': 'Flow',
+  'Status Board': 'Bảng trạng thái',
+  'Active': 'Đang hoạt động',
+  'Needs login': 'Cần đăng nhập',
+  'Cooling': 'Đang nghỉ',
+  'Cooling down': 'Đang cooldown',
+  'Archived': 'Đã lưu trữ',
+  'Synced': 'Đã đồng bộ',
+  'Ready': 'Sẵn sàng',
+  'Session': 'Session',
+  'Repos': 'Repo',
+  'Surface': 'Bề mặt',
+  'Antigravity-inspired flow': 'Flow lấy cảm hứng từ Antigravity',
+  'Session ready': 'Session sẵn sàng',
+  'Spotlight': 'Spotlight',
+  'Edit profile': 'Chỉnh sửa profile',
+  'Quick Actions': 'Thao tác nhanh',
+  'Best Accounts': 'Account tốt nhất',
+  'Renewals': 'Gia hạn',
+  'email, repo, profile, tag...': 'email, repo, profile, tag...',
+  'Plan': 'Gói',
+  'Status': 'Trạng thái',
+  'Platform': 'Nền tảng',
+  'Grid view': 'Xem dạng lưới',
+  'List view': 'Xem dạng danh sách',
+  'Import': 'Nhập',
+  'Export': 'Xuất',
+  'Add Account': 'Thêm tài khoản',
+  'Account': 'Tài khoản',
+  'Renewal': 'Gia hạn',
+  'Actions': 'Thao tác',
+  'Sync': 'Đồng bộ',
+  'Focus Account': 'Focus tài khoản',
+  'Priority': 'Ưu tiên',
+  'Partition': 'Phân vùng',
+  'Last session': 'Session gần nhất',
+  'Last sync': 'Lần sync gần nhất',
+  'Codex profile': 'Profile Codex',
+  'usage': 'Usage',
+  'Reset usage': 'Reset usage',
+  'Credits': 'Credits',
+  'Profile account': 'Tài khoản profile',
+  'Profile path': 'Đường dẫn profile',
+  'Codex workspace': 'Workspace Codex',
+  'Sync usage Codex': 'Sync usage Codex',
+  'Billing': 'Thanh toán',
+  'Open profile folder': 'Mở thư mục profile',
+  'Reset': 'Reset',
+  'Copy partition': 'Copy partition',
+  'Diagnostics': 'Chẩn đoán',
+  'Quick Notes': 'Ghi chú nhanh',
+  'Profile': 'Profile',
+  'Copy email': 'Copy email',
+  'Duplicate': 'Nhân bản',
+  'Delete': 'Xóa',
+  'Synced name': 'Tên đã sync',
+  'Synced email': 'Email đã sync',
+  'Synced plan': 'Gói đã sync',
+  'Email': 'Email',
+  'Browser profile': 'Profile trình duyệt',
+  'Open': 'Mở',
+  'Budget / note limit': 'Giới hạn budget / ghi chú',
+  'Operations': 'Vận hành',
+  'Tags': 'Tags',
+  'Repositories': 'Repositories',
+  'Path': 'Đường dẫn',
+  'Delete repo': 'Xóa repo',
+  'Focused Slot': 'Slot đang focus',
+  'Imported files': 'File đã import',
+  'Conversations': 'Hội thoại',
+  'Messages': 'Tin nhắn',
+  'Backup folder': 'Thư mục backup',
+  'Import export ChatGPT': 'Import/export ChatGPT',
+  'Imported Backups': 'Backup đã import',
+  'Preview': 'Xem trước',
+  'Plus': 'Plus',
+  'Pro': 'Pro',
+  'Business': 'Business',
+  'Enterprise': 'Enterprise',
+  'Other': 'Khác',
+  'Primary': 'Primary',
+  'Burst': 'Burst',
+  'Backup': 'Backup',
+  'macOS': 'macOS',
+  'Windows': 'Windows',
+  'Shared': 'Shared',
+  'CLI': 'CLI',
+  'App': 'App',
+  'Web': 'Web',
+  'Mixed': 'Mixed',
+  'Edit': 'Sửa',
+  'Usage': 'Usage',
+  'Open Session': 'Mở session',
+  'Score': 'Điểm',
+  'Start URL': 'URL bắt đầu',
+  'Session opened': 'Đã mở session',
+  'Sync usage': 'Sync usage',
+  '/duong-dan/project': '/duong-dan/project',
+  'frontend bugfix, batch review...': 'frontend bugfix, batch review...',
+  'unknown': 'không rõ',
+  'msg': 'tin nhắn',
+  'Support': 'Hỗ trợ',
+  'DO TAI - Timo Digital Bank by BVBank': 'DO TAI - Timo Digital Bank by BVBank',
+  'Binance (USDT - BEP20)': 'Binance (USDT - BEP20)',
+  'Usage Guide': 'Hướng dẫn sử dụng',
+  'Binance Pay': 'Binance Pay',
+}
+
+type VietnameseDynamicRule = {
+  pattern: RegExp
+  translate: (match: RegExpMatchArray) => string
+}
+
+const vietnameseDynamicRules: VietnameseDynamicRule[] = [
+  {
+    pattern: /^Qua han (\d+) ngay$/,
+    translate: ([, days]) => `Quá hạn ${days} ngày`,
+  },
+  {
+    pattern: /^(\d+) ngay nua$/,
+    translate: ([, days]) => `${days} ngày nữa`,
+  },
+  {
+    pattern: /^Dong bo (.+)$/,
+    translate: ([, value]) => `Đồng bộ ${value}`,
+  },
+  {
+    pattern: /^Session gan nhat (.+)$/,
+    translate: ([, value]) => `Session gần nhất ${value}`,
+  },
+  {
+    pattern: /^Trong (\d+) ngay toi$/,
+    translate: ([, days]) => `Trong ${days} ngày tới`,
+  },
+  {
+    pattern: /^(\d+) slot dang Active$/,
+    translate: ([, count]) => `${count} slot đang Active`,
+  },
+  {
+    pattern: /^(\d+) slot o vai tro Primary$/,
+    translate: ([, count]) => `${count} slot ở vai trò Primary`,
+  },
+  {
+    pattern: /^(\d+) slot dang hien thi$/,
+    translate: ([, count]) => `${count} slot đang hiển thị`,
+  },
+  {
+    pattern: /^Account dang chon cho profile Codex: (.+)\.$/,
+    translate: ([, name]) => `Account đang chọn cho profile Codex: ${name}.`,
+  },
+  {
+    pattern: /^Xoa "(.+)" khoi dashboard nay\?$/,
+    translate: ([, name]) => `Xóa "${name}" khỏi dashboard này?`,
+  },
+  {
+    pattern:
+      /^Reset session rieng cua "(.+)"\? Thao tac nay se xoa cookies va buoc dang nhap lai\.$/,
+    translate: ([, name]) =>
+      `Reset session riêng của "${name}"? Thao tác này sẽ xóa cookies và buộc đăng nhập lại.`,
+  },
+  {
+    pattern: /^Mo Codex: (.+)$/,
+    translate: ([, name]) => `Mở Codex: ${name}`,
+  },
+  {
+    pattern: /^Mo workspace cho (.+)$/,
+    translate: ([, name]) => `Mở workspace cho ${name}`,
+  },
+  {
+    pattern: /^Cap nhat (.+)$/,
+    translate: ([, version]) => `Cập nhật ${version}`,
+  },
+  {
+    pattern: /^Tim thay (.+)$/,
+    translate: ([, version]) => `Tìm thấy ${version}`,
+  },
+  {
+    pattern: /^Dang tai (\d+)%$/,
+    translate: ([, percent]) => `Đang tải ${percent}%`,
+  },
+  {
+    pattern: /^San sang cai (.+)$/,
+    translate: ([, version]) => `Sẵn sàng cài ${version}`,
+  },
+  {
+    pattern: /^Da tim thay ban moi (.+)\. Dang tai ve\.\.\.$/,
+    translate: ([, version]) => `Đã tìm thấy bản mới ${version}. Đang tải về...`,
+  },
+  {
+    pattern: /^Dang tai ban (.+)\.\.\. (\d+)%$/,
+    translate: ([, version, percent]) => `Đang tải bản ${version}... ${percent}%`,
+  },
+  {
+    pattern: /^Da tai xong ban (.+)\. Bam cai dat de khoi dong lai app\.$/,
+    translate: ([, version]) =>
+      `Đã tải xong bản ${version}. Bấm cài đặt để khởi động lại app.`,
+  },
+  {
+    pattern: /^Da xoa (.+)\.$/,
+    translate: ([, name]) => `Đã xóa ${name}.`,
+  },
+  {
+    pattern: /^Da xuat JSON ra (.+)\.$/,
+    translate: ([, path]) => `Đã xuất JSON ra ${path}.`,
+  },
+  {
+    pattern: /^Da nap du lieu tu (.+)\.$/,
+    translate: ([, path]) => `Đã nạp dữ liệu từ ${path}.`,
+  },
+  {
+    pattern: /^Da yeu cau he dieu hanh mo (.+)\.$/,
+    translate: ([, label]) => `Đã yêu cầu hệ điều hành mở ${label}.`,
+  },
+  {
+    pattern: /^Da mo profile Codex cua (.+)\.$/,
+    translate: ([, name]) => `Đã mở profile Codex của ${name}.`,
+  },
+  {
+    pattern: /^Da cap nhat profile cho (.+), nhung slot nay dang trung account voi (.+)\.$/,
+    translate: ([, name, duplicate]) =>
+      `Đã cập nhật profile cho ${name}, nhưng slot này đang trùng account với ${duplicate}.`,
+  },
+  {
+    pattern: /^Da cap nhat profile Codex cho (.+)\.$/,
+    translate: ([, name]) => `Đã cập nhật profile Codex cho ${name}.`,
+  },
+  {
+    pattern: /^Chan doan (.+): (.+)$/,
+    translate: ([, name, summary]) => `Chẩn đoán ${name}: ${summary}`,
+  },
+  {
+    pattern: /^Da import backup chat cho (.+)\.$/,
+    translate: ([, name]) => `Đã import backup chat cho ${name}.`,
+  },
+  {
+    pattern: /^Chua co (.+) de copy\.$/,
+    translate: ([, label]) => `Chưa có ${label} để copy.`,
+  },
+  {
+    pattern: /^Da copy (.+)\.$/,
+    translate: ([, label]) => `Đã copy ${label}.`,
+  },
+  {
+    pattern: /^Khong copy duoc (.+)\.$/,
+    translate: ([, label]) => `Không copy được ${label}.`,
+  },
+  {
+    pattern:
+      /^Da mo session rieng cho (.+)\. Dang nhap trong cua so do, cookies se duoc giu theo partition rieng\.$/,
+    translate: ([, name]) =>
+      `Đã mở session riêng cho ${name}. Đăng nhập trong cửa sổ đó, cookies sẽ được giữ theo partition riêng.`,
+  },
+  {
+    pattern:
+      /^Da mo trang Billing cho (.+)\. Neu ban la owner\/admin cua workspace, ban co the xem invoice va chu ky billing ngay trong modal nay\.$/,
+    translate: ([, name]) =>
+      `Đã mở trang Billing cho ${name}. Nếu bạn là owner/admin của workspace, bạn có thể xem invoice và chu kỳ billing ngay trong modal này.`,
+  },
+  {
+    pattern:
+      /^Da mo trang Account cho (.+)\. Renewal date cua goi ca nhan thuong nam ngay trong modal nay; neu can thao tac billing them thi bam Manage\.$/,
+    translate: ([, name]) =>
+      `Đã mở trang Account cho ${name}. Renewal date của gói cá nhân thường nằm ngay trong modal này; nếu cần thao tác billing thêm thì bấm Manage.`,
+  },
+  {
+    pattern: /^Khong doc duoc renewal date cho (.+)\.$/,
+    translate: ([, name]) => `Không đọc được renewal date cho ${name}.`,
+  },
+  {
+    pattern: /^Da dien Gia han (.+) cho (.+?)(?: \((.+)\))?\.$/,
+    translate: ([, date, name, source]) => {
+      const sourceSuffix = source ? ` (${source})` : ''
+      return `Đã điền Gia hạn ${date} cho ${name}${sourceSuffix}.`
+    },
+  },
+  {
+    pattern: /^Da xoa session rieng cua (.+)\. Mo lai cua so session de dang nhap tai khoan nay\.$/,
+    translate: ([, name]) =>
+      `Đã xóa session riêng của ${name}. Mở lại cửa sổ session để đăng nhập tài khoản này.`,
+  },
+  {
+    pattern: /^Da dong bo thong tin session cho (.+)\.$/,
+    translate: ([, name]) => `Đã đồng bộ thông tin session cho ${name}.`,
+  },
+  {
+    pattern: /^Hien dang mo profile cua (.+)\. Ban dang xem slot (.+)\.$/,
+    translate: ([, active, viewing]) =>
+      `Hiện đang mở profile của ${active}. Bạn đang xem slot ${viewing}.`,
+  },
+  {
+    pattern: /^Khong mo duoc (.+)\.$/,
+    translate: ([, target]) => `Không mở được ${target}.`,
+  },
+  {
+    pattern: /^Khong doc duoc (.+)\.$/,
+    translate: ([, target]) => `Không đọc được ${target}.`,
+  },
+  {
+    pattern: /^(\d+) chats tu (.+)$/,
+    translate: ([, chats, importedAt]) => `${chats} chats từ ${importedAt}`,
+  },
+]
+
 const dynamicRules: DynamicRule[] = [
   {
     pattern: /^Qua han (\d+) ngay$/,
@@ -1611,18 +2175,47 @@ export function getIntlLocale(language = activeLanguage) {
   return localeByLanguage[language]
 }
 
+function normalizeVietnameseKey(source: string) {
+  return source
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd')
+    .replace(/Đ/g, 'D')
+}
+
 function translateTrimmed(source: string, language: AppLanguage) {
-  if (!source || language === 'vi') {
+  if (!source) {
     return source
   }
 
-  const exact = exactTranslations[source]?.[language]
+  const normalizedSource = normalizeVietnameseKey(source)
+
+  if (language === 'vi') {
+    const exactVi = vietnameseAccentedTranslations[source] ?? vietnameseAccentedTranslations[normalizedSource]
+    if (exactVi) {
+      return exactVi
+    }
+
+    for (const rule of vietnameseDynamicRules) {
+      const match = normalizedSource.match(rule.pattern)
+      if (!match) {
+        continue
+      }
+      return rule.translate(match)
+    }
+
+    return source
+  }
+
+  const exact =
+    exactTranslations[source]?.[language] ??
+    exactTranslations[normalizedSource]?.[language]
   if (exact) {
     return exact
   }
 
   for (const rule of dynamicRules) {
-    const match = source.match(rule.pattern)
+    const match = source.match(rule.pattern) ?? normalizedSource.match(rule.pattern)
     if (!match) {
       continue
     }

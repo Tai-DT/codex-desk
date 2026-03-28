@@ -24,3 +24,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.project-identity
+CODEBASE.md
+*.code-workspace
